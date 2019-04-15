@@ -5,20 +5,25 @@ KMaleon KIWI
 Estilos del sitio web de la documentación del framework y PRUEBAS
 
 */
+
+.cl-logo{
+    max-width: 100%;
+}
+
 @media all and (min-width: 360px) {
     body {
         background-color: #E2213C;
     }
-    .kontainer {
-        width: 340px;
-    }
-    .k-nav-items {
+    /*.n-container {*/
+        /*width: 340px;*/
+    /*}*/
+    .n-nav-items {
         display: none;
     }
-    .k-nav-items li {
+    .n-nav-items li {
         display: block;
     }
-    .k-nav-toggle {
+    .n-nav-toggle {
         display: block;
         padding: 8px;
     }
@@ -27,16 +32,16 @@ Estilos del sitio web de la documentación del framework y PRUEBAS
     body {
         background-color: #F05325;
     }
-    .kontainer {
-        min-width: 420px;
-    }
-    .k-nav-items {
+    /*.n-container {*/
+        /*min-width: 420px;*/
+    /*}*/
+    .n-nav-items {
         display: none;
     }
-    .k-nav-items li {
+    .n-nav-items li {
         display: block;
     }
-    .k-nav-toggle {
+    .n-nav-toggle {
         display: block;
         padding: 8px;
     }
@@ -45,16 +50,16 @@ Estilos del sitio web de la documentación del framework y PRUEBAS
     body {
         background-color: yellow;
     }
-    .kontainer {
-        width: 760px;
-    }
-    .k-nav-items {
+    /*.n-container {*/
+        /*width: 760px;*/
+    /*}*/
+    .n-nav-items {
         display: inline-block;
     }
-    .k-nav-toggle {
+    .n-nav-toggle {
         display: none;
     }
-    .k-nav-items li {
+    .n-nav-items li {
         display: inline-table;
         text-align: center;
         width: 100px;
@@ -64,15 +69,15 @@ Estilos del sitio web de la documentación del framework y PRUEBAS
     body {
         background-color: #E5318A;
     }
-    .kontainer {
-        width: 960px;
-    }
+    /*.n-container {*/
+        /*width: 960px;*/
+    /*}*/
 }
 @media all and (min-width: 1200px) {
     body {
         background-color: #0097B3;
     }
-    .kontainer {
+    .n-container {
         width: 1180px;
     }
 }

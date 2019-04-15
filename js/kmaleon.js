@@ -1,12 +1,12 @@
 var BaseURL = 'http://immsa.binarylemon.net/';
-function Modal_Cerrar() { $("#cl-modal").fadeOut(); }
+function Modal_Cerrar() { $("#n-modal").fadeOut(); }
 
 $(document).ready(function () {
     $('.Mensaje').click(Mensaje_Modal);
     $('#btnMenu').click(Menu);
 
     function Menu() {
-        $('.k-nav-items').toggle('height');
+        $('.n-nav-items').toggle('height');
     }
 
     function Mensaje_Modal() {
@@ -15,21 +15,21 @@ $(document).ready(function () {
     }
 
     function Mostrar_Modal(Titulo, TipoModal, Opciones, Mensaje, AFormulario, Formulario, ID) {
-        var btnAceptar  = '<input type="button" class="cl-btn btn-color-turquoise" value="Aceptar" onclick="Modal_Cerrar();" />';
+        var btnAceptar  = '<input type="button" class="n-btn btn-color-turquoise" value="Aceptar" onclick="Modal_Cerrar();" />';
 
         var Botones = "";
         switch (Opciones) {
             case "Aceptar": Botones = btnAceptar; break;
         }
-        $("#cl-modal .cl-footer").html(Botones);
-        $("#cl-modal .cl-sending").hide();
-        $("#cl-modal .cl-body p").html('').hide();
+        $("#n-modal .n-modal-footer").html(Botones);
+        $("#n-modal .cl-sending").hide();
+        $("#n-modal .n-modal-body p").html('').hide();
 
-        $("#cl-modal .cl-head b").html(Titulo);
-        $("#cl-modal form").attr("action", AFormulario);
+        $("#n-modal .n-modal-header b").html(Titulo);
+        $("#n-modal form").attr("action", AFormulario);
         //Mostrar el mensaje o solicitar formulario
         if (TipoModal == "Mensaje") {
-            $("#cl-modal .cl-body").html(Mensaje).slideDown();
+            $("#n-modal .n-modal-body").html(Mensaje).slideDown();
         } else {
             $.ajax({
                 type: "POST",
@@ -37,20 +37,20 @@ $(document).ready(function () {
                 dataType: "html",
                 data: { id_registro: ID },
                 beforeSend: function() {
-                    $('#cl-modal .bl-body').html('Cargando formulario...');
+                    $('#n-modal .bl-body').html('Cargando formulario...');
                 },
                 success: function(Formulario) {
-                    $('#cl-modal .bl-body').html(Formulario).fadeIn();
+                    $('#n-modal .bl-body').html(Formulario).fadeIn();
                 },
                 error: function() {
-                    $('#cl-modal .modal-header h4').html('Error');
-                    $('#cl-modal form').attr("action", "#");
-                    $('#cl-modal .bl-body').html('<div class="alert alert-danger" role="alert">No se pudo cargar el formulario. Por favor revise su conexi�n a Internet, intente m�s tarde o contacte a su administrador de sistemas.</div>').fadeIn();
-                    $('#cl-modal .bl-footer').html(btnAceptar);
+                    $('#n-modal .modal-header h4').html('Error');
+                    $('#n-modal form').attr("action", "#");
+                    $('#n-modal .bl-body').html('<div class="alert alert-danger" role="alert">No se pudo cargar el formulario. Por favor revise su conexi�n a Internet, intente m�s tarde o contacte a su administrador de sistemas.</div>').fadeIn();
+                    $('#n-modal .bl-footer').html(btnAceptar);
                 }
             });
         }
         //Mostrar formulario
-        $("#cl-modal").fadeIn();
+        $("#n-modal").fadeIn();
     }
 });

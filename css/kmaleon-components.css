@@ -1,15 +1,22 @@
 /*
-Esquema de colores
+Variables globales (estructura, estilos y colores)
 */
 :root {
+    /*Fuente principal*/
+    --font-size: 14px;
+    --font-family: sans-serif;
+    /*Márgenes externos e internos*/
+    --margin: 15px;
+    --padding: 15px;
+    /*Colores*/
     --kolor-primary: #00A8FF;
     --kolor-primary-hover: #0097E6;
 }
 body {
     color:#333333;
     background-color: #F2F2F2;
-    font-size: 13px;
-    font-family: sans-serif;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -24,8 +31,12 @@ pre {
     font-family: monospace;
     white-space: pre;
 }
+[class*="n-col-"] ul {
+    margin-left: var(--margin);
+    margin-bottom: var(--margin);
+}
 p {
-    margin-bottom: 15px;
+    margin-bottom: var(--margin);
 }
 code {
     background-color: #fff39e;
@@ -41,13 +52,13 @@ h1, h2, h3, h4, h5 ,h6{
     margin-bottom: 15px;
 }
 h1{
-    font-size: 3.3em;
+    font-size: 3rem;
 }
 h2{
-    font-size: 2.3em;
+    font-size: 2.5rem;
 }
 label{
-    font-size: 14px;       
+    font-size: 1rem;
 }
 hr{
     margin-top: 20px;
@@ -90,12 +101,9 @@ hr{
     text-decoration: none;
     border-bottom: 1px dotted white;
 }
-.cl-logo{
-    max-width: 100%;
-}
 /*Estilo de la Ventana Modal*/
 /***********Inicio***********/
-#cl-modal{
+#n-modal{
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -113,7 +121,7 @@ hr{
     border-radius: 4px 4px 4px 4px;
     padding-top: 40px;
 }
-.cl-head {
+.n-modal-header {
     background-color: #FFFFFF;
     padding: 13px 13px 13px 13px;
     border-radius: 4px 4px 0px 0px;
@@ -122,24 +130,24 @@ hr{
     width: 500px;
     margin: 0 auto;
 }
-.cl-body{
+.n-modal-title {
+    font-size: 16px;
+    margin: 0px;
+}
+.n-modal-body {
     background-color: #FFFFFF;
     padding: 13px 13px 13px 13px;
     width: 500px;
     margin: 0 auto;
 }
-.cl-footer{
+.n-modal-footer {
     background-color: #F5F5F5;
     padding: 13px 13px 13px 13px;
     border-radius: 0px 0px 4px 4px;
     width: 500px;
     margin: 0 auto;
 }
-.cl-title{
-    font-size: 16px;
-    margin: 0px;
-}
-.cl-close{
+.n-modal-close {
     float: right;
     right: 15px;
     top: 15px;
@@ -265,7 +273,7 @@ hr{
 
 /*Estilo de Botones*/
 /***********Inicio***********/
-.cl-btn{
+.n-btn{
     border-radius: 2px;
     height: 30px;
     min-width: 90px;
@@ -277,7 +285,7 @@ hr{
     width: 100%;
 }
 .cl-btn-large{
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 2px;
     height: 45px;
     min-width: 150px;
@@ -295,7 +303,7 @@ input[type=text], input[type=password], input[type=email]{
     border: 1px solid #00A8FF;
     color: #34495e;
     font-family: "Lato", sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     padding: 8px;
     text-indent: 1px;
     -webkit-border-radius: 4px;
@@ -305,7 +313,7 @@ input[type=text], input[type=password], input[type=email]{
     box-sizing: border-box;
 }
 input:focus { 
-    outline:0px;
+    outline:0;
     background-color: #F1F1F1;
 }
 .line input[type="text"], .line input[type="password"], .line input[type="email"]{
@@ -314,7 +322,7 @@ input:focus {
     background: 0;
     border: 0;
     border-bottom: 1px solid #00A8FF;
-    font-size: 14px;
+    font-size: 1rem;
     color: #333;   
     border-radius:0px;
     box-sizing: border-box;
@@ -327,35 +335,16 @@ input:focus {
     width: 100%;
 }
 
-@media all and (max-width: 360px) and (min-width: 0px) {
-    body {
-        background-color: #803594;
-    }
-    .k-nav-items {
-        display: none;
-    }
-    .k-nav-items li {
-        display: block;
-    }
-    .k-nav-toggle {
-        display: block;
-        padding: 8px;
-    }
-    .cl-head, .cl-body, .cl-footer{
-        width: 210px;
-    }
-}
-
 /*
 Menú de navegación (nav-bar)
 */
-.k-nav{
+.n-nav{
     background-color: #F0F0F0;
 }
-.k-nav-items {
+.n-nav-items {
     list-style: none;
 }
-.k-nav a {
+.n-nav a {
     text-decoration: none;
     color: #333333;
     padding: 5px;
@@ -363,7 +352,7 @@ Menú de navegación (nav-bar)
     list-style: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.k-nav a:hover {
+.n-nav a:hover {
     color: #000;
     background-color: #FFF;
     padding: 5px;
@@ -372,3 +361,21 @@ Menú de navegación (nav-bar)
 /*
 FIN: Menú de navegación (nav-bar)
 */
+@media all and (max-width: 360px) and (min-width: 0px) {
+    body {
+        background-color: #803594;
+    }
+    .n-nav-items {
+        display: none;
+    }
+    .n-nav-items li {
+        display: block;
+    }
+    .n-nav-toggle {
+        display: block;
+        padding: 8px;
+    }
+    .n-modal-header, .n-modal-body, .n-modal-footer{
+        width: 210px;
+    }
+}
