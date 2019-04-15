@@ -32,6 +32,7 @@ video {
 }
 .k-row {
     width: 100%;
+    margin-bottom: 15px;
 }
 /*
 Elminar desborde del contenido de las filas
@@ -49,7 +50,8 @@ Todas serán de 100% de ancho inicialmente (Mobile First)
 */
 [class*="kol-"] {
     float: left;
-    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 100%;
 }
 /* Mobile - Small */

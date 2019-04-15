@@ -24,6 +24,16 @@ pre {
     font-family: monospace;
     white-space: pre;
 }
+p {
+    margin-bottom: 15px;
+}
+code {
+    background-color: #fff39e;
+    padding: 0 5px;
+}
+ul {
+    margin-bottom: 15px;
+}
 /*
 ENCABEZADOS
 */
