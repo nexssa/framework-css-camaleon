@@ -1,26 +1,37 @@
-body{
+/*
+Esquema de colores
+*/
+:root {
+    --kolor-primary: #00A8FF;
+    --kolor-primary-hover: #0097E6;
+}
+body {
     color:#333333;
-    background: #F2F2F2;
-    font: 13px sans-serif;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    background-color: #F2F2F2;
+    font-size: 13px;
+    font-family: sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 pre {
   	background-color:#F1F1F1;
-  	border:1px solid #F9F9F9;
+  	border: 1px solid #F9F9F9;
   	padding-top:10px;
     padding-bottom:10px;
-  	overflow:auto  	
-  	color:#0150c7;    
+  	overflow: auto;
+  	color:#0150c7;
     display: block;
     font-family: monospace;
     white-space: pre;
-    margin: 1em 0;
 }
+/*
+ENCABEZADOS
+*/
 h1, h2, h3, h4, h5 ,h6{
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: -0.035em;
     line-height: 1em;
+    margin-bottom: 15px;
 }
 h1{
     font-size: 3.3em;
@@ -48,11 +59,7 @@ hr{
 ::-webkit-scrollbar-thumb{
     background-color: #006B80;
 }
-.cl-container{
-    margin: auto;
-    padding: 0px;
-    background-color: #FFFFFF;
-}
+
 .cl-page-content{
     background-color: #FFFFFF;
     padding: 25px;
@@ -160,7 +167,11 @@ hr{
 /***********Final***********/
 
 /*Estilo de Colores*/
+
 /***********Inicio***********/
+.k-background-white {
+    background-color: #FFFFFF;
+}
 .btn-color-default{
     border: 1px solid #C3C3C3;
     background-color: #DDDDDD;
@@ -313,106 +324,31 @@ input:focus {
     body {
         background-color: #803594;
     }
-    .cl-container {
-        width: 240px;
-    }
-    .cl-menu {
+    .k-nav-items {
         display: none;
     }
-    .cl-menu li {
+    .k-nav-items li {
         display: block;
     }
-    .cl-nav-toggle {
+    .k-nav-toggle {
         display: block;
         padding: 8px;
     }
     .cl-head, .cl-body, .cl-footer{
         width: 210px;
     }
-    .cl-col-4{
-        width: 100%;
-    }
-}
-@media all and (min-width: 360px) {
-    body {
-        background-color: #E2213C;
-    }
-    .cl-container {
-        width: 340px;
-    }
-    .cl-menu {
-        display: none;
-    }
-    .cl-menu li {
-        display: block;
-    }
-    .cl-nav-toggle {
-        display: block;
-        padding: 8px;
-    }
-}
-@media all and (min-width: 480px) {
-    body {
-        background-color: #F05325;
-    }
-    .cl-container {
-        min-width: 420px;
-    }
-    .cl-menu {
-        display: none;
-    }
-    .cl-menu li {
-        display: block;
-    }
-    .cl-nav-toggle {
-        display: block;
-        padding: 8px;
-    }
-}
-@media all and (min-width: 800px) {
-    body {
-        background-color: yellow;
-    }
-    .cl-container {
-        width: 760px;
-    }
-    .cl-menu {
-        display: inline-block;
-    }
-    .cl-nav-toggle {
-        display: none;
-    }
-    .cl-menu li {
-        display: inline-table;
-        text-align: center;
-        width: 100px;
-    }
-}
-@media all and (min-width: 1024px) {
-    body {
-        background-color: #E5318A;
-    }
-    .cl-container {
-        width: 960px;
-    }
-}
-@media all and (min-width: 1200px) {
-    body {
-        background-color: #0097B3;
-    }
-    .cl-container {
-        width: 1180px;
-    }
 }
 
-.cl-menu {
-    list-style: none;
-    margin-left: -40px;
-}
-.cl-main-menu{
+/*
+Menú de navegación (nav-bar)
+*/
+.k-nav{
     background-color: #F0F0F0;
 }
-.cl-main-menu a {
+.k-nav-items {
+    list-style: none;
+}
+.k-nav a {
     text-decoration: none;
     color: #333333;
     padding: 5px;
@@ -420,54 +356,12 @@ input:focus {
     list-style: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.cl-main-menu a:hover {
+.k-nav a:hover {
     color: #000;
     background-color: #FFF;
     padding: 5px;
     display: block;
 }
-
-
-
-/*PRUEBA*/
-.contenedor-tabla{
-    width: 100%;
-    display: table;
-}
-.contenedor-fila{
-    width: 100%;
-    display: table-row;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.contenedor-columna{
-    display: table-cell;
-    width:33.33333333%;
-    float:left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.cl-col-1{
-    width: 8,33333333%;
-}
-.cl-col-2{
-    width: 16,66666666%;
-}
-.cl-col-3{
-    width: 25%;
-}
-.cl-col-4{
-    width: 29.33333333%;
-    float:left;
-    position: relative;
-    padding-right: 2%;
-    padding-left: 2%;
-}
-.cl-col-5{
-    width: 41.66666666%;
-}
-.cl-col-6{
-    width: 50%;
-}
+/*
+FIN: Menú de navegación (nav-bar)
+*/

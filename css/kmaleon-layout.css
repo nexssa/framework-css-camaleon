@@ -1,0 +1,132 @@
+/*
+
+KMaleon Layout
+--------------
+Estructura base de contenedores, filas y columnas (adaptables)
+
+*/
+
+/*Restableciendo todos los elementos*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /*Asegrurarse que el margen interno (padding) y el borde formen parte del ancho total. */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+video {
+    max-width: 100%;
+    height: auto;
+}
+.kontainer-full
+{
+    width: 100%;
+}
+.kontainer
+{
+    width: 100%;
+    margin: auto;
+    background-color: #FFFFFF;
+}
+.k-row {
+    width: 100%;
+}
+/*
+Elminar desborde del contenido de las filas
+*/
+.kontainer-full::after,
+.kontainer::after,
+.k-row::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+/*
+Estilo global para todas las columnas (empiezan por kol-)
+Todas serán de 100% de ancho inicialmente (Mobile First)
+*/
+[class*="kol-"] {
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+/* Mobile - Small */
+@media only screen and (max-width: 420px) {
+    [class*="kol-"] {
+        width: 100%;
+    }
+}
+/* Mobile - Smartphones */
+@media only screen and (min-width: 420px) {
+    .kontainer {
+        width: 400px;
+    }
+    .kol-s-1 {width: 8.33%;}
+    .kol-s-2 {width: 16.66%;}
+    .kol-s-3 {width: 25%;}
+    .kol-s-4 {width: 33.33%;}
+    .kol-s-5 {width: 41.66%;}
+    .kol-s-6 {width: 50%;}
+    .kol-s-7 {width: 58.33%;}
+    .kol-s-8 {width: 66.66%;}
+    .kol-s-9 {width: 75%;}
+    .kol-s-10 {width: 83.33%;}
+    .kol-s-11 {width: 91.66%;}
+    .kol-s-12 {width: 100%;}
+}
+/* Mobile - Tablets */
+@media only screen and (min-width: 600px) {
+    .kontainer {
+        width: 580px;
+    }
+    .kol-m-1 {width: 8.33%;}
+    .kol-m-2 {width: 16.66%;}
+    .kol-m-3 {width: 25%;}
+    .kol-m-4 {width: 33.33%;}
+    .kol-m-5 {width: 41.66%;}
+    .kol-m-6 {width: 50%;}
+    .kol-m-7 {width: 58.33%;}
+    .kol-m-8 {width: 66.66%;}
+    .kol-m-9 {width: 75%;}
+    .kol-m-10 {width: 83.33%;}
+    .kol-m-11 {width: 91.66%;}
+    .kol-m-12 {width: 100%;}
+}
+/* Escritorio - Estándar */
+@media only screen and (min-width: 768px) {
+    .kontainer {
+        width: 760px;
+    }
+    .kol-1 {width: 8.33%;}
+    .kol-2 {width: 16.66%;}
+    .kol-3 {width: 25%;}
+    .kol-4 {width: 33.33%;}
+    .kol-5 {width: 41.66%;}
+    .kol-6 {width: 50%;}
+    .kol-7 {width: 58.33%;}
+    .kol-8 {width: 66.66%;}
+    .kol-9 {width: 75%;}
+    .kol-10 {width: 83.33%;}
+    .kol-11 {width: 91.66%;}
+    .kol-12 {width: 100%;}
+}
+/*Escritorio - Ampliado */
+@media only screen and (min-width: 1200px) {
+    .kontainer {
+        width: 1180px;
+    }
+    .kol-l-1 {width: 8.33%;}
+    .kol-l-2 {width: 16.66%;}
+    .kol-l-3 {width: 25%;}
+    .kol-l-4 {width: 33.33%;}
+    .kol-l-5 {width: 41.66%;}
+    .kol-l-6 {width: 50%;}
+    .kol-l-7 {width: 58.33%;}
+    .kol-l-8 {width: 66.66%;}
+    .kol-l-9 {width: 75%;}
+    .kol-l-10 {width: 83.33%;}
+    .kol-l-11 {width: 91.66%;}
+    .kol-l-12 {width: 100%;}
+}

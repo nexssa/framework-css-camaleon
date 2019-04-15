@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('#btnMenu').click(Menu);
 
     function Menu() {
-        $('.cl-menu').toggle('height');
+        $('.k-nav-items').toggle('height');
     }
 
     function Mensaje_Modal() {
