@@ -7,9 +7,9 @@ Estructura base de contenedores, filas y columnas (adaptables)
 */
 
 /*Restableciendo todos los elementos*/
-* {
-  margin: 0px;
-  padding: 0px;
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; /*Asegrurarse que el margen interno (padding) y el borde formen parte del ancho total. */
 }
 img {
@@ -32,7 +32,6 @@ video {
 }
 .k-row {
     width: 100%;
-    margin-bottom: 15px;
 }
 /*
 Elminar desborde del contenido de las filas
