@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/kmaleon-layout.css" rel="stylesheet" type="text/css"/>
+    <link href="css/kmaleon-components.css" rel="stylesheet" type="text/css"/>
+    <link href="css/kmaleon-kiwi.css" rel="stylesheet" type="text/css"/>
+    <link href="css/all.css" rel="stylesheet" type="text/css"/>
+    <link href="css/n-menu-vertical.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script src="js/kmaleon.js" type="text/javascript"></script>
+    <title>Framework Kamaleon</title>
+    <style>
+        [class*="n-col-"] {
+            /*Prueba de revisión de adaptabilidad de columnas*/
+            border: 1px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <div class="n-menu-v-page-container dark-theme n-toggled">
+        <a id="n-menu-v-show" class="n-btn-toggled btn-color-binarylemon" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="n-menu-v" class="n-menu-v-container">
+            <div class="n-menu-v-content">
+                <div class="n-menu-v-brand">
+                    <a href="#">Citrus Payroll</a>
+                    <div id="n-menu-v-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="n-menu-v-header">
+                    <div class="n-menu-v-user-pic">
+                        <img class="" src="https://www.citrus-payroll.com/ingenieriademateriales/img/usuario.png" alt="Usuario">
+                    </div>
+                    <div class="n-menu-v-user-info">
+                        <span class="n-menu-v-user-name">
+                            <strong>Usuario</strong>
+                        </span>
+                        <span class="n-menu-v-user-role">Administrador</span>
+                        <span class="n-menu-v-user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>En línea</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="n-menu-v">
+                    <ul>
+                        <li class="n-menu-v-header-title">
+                            <span>General</span>
+                        </li>
+                        <li class="n-menu-v-dropdown">
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                <span>Componentes</span>
+                            </a>
+                            <div class="n-menu-v-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Inicio</a>
+                                    </li>
+                                    <li>
+                                        <a href="layouts.html">Layout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="n-menu-v-dropdown">
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                <span>Usuarios</span>
+                            </a>
+                            <div class="n-menu-v-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Roles
+                                            <span class="badge btn-color-politecnia">Pendiente</span>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">Usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Permisos
+                                            <span class="badge btn-color-red">Pendiente</span>
+                                        </a>                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">Bitácora</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Personal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="n-menu-v-footer">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main class="n-page_content">
+            <!--INICIO -->
+            <div class="n-container-full">
+                <div class="n-row">
+                    <div class="n-col-12">
+                        <h1>.kontainer-full</h1>
+                    </div>
+                </div>
+                <div class="n-row" style="background: #d3ffab;">
+                    <div class="n-col-2 n-col-12m">
+                        col-2<br>
+                        col-2<br>
+                        col-2<br>
+                    </div>
+                    <div class="n-col-5 n-col-6m n-col-6s">
+                        col-5<br>
+                        col-5<br>
+                        col-5<br>
+                    </div>
+                    <div class="n-col-5 n-col-6m n-col-6s">
+                        col-5<br>
+                        col-5<br>
+                        col-5<br>
+                    </div>
+                </div>
+                <div class="n-row" style="background: #ffbb9d;">
+                    <div class="n-col-10 n-col-8m">
+                        col-10<br>
+                        col-10<br>
+                        col-10<br>
+                    </div>
+                    <div class="n-col-2 n-col-4m">
+                        col-2<br>
+                        col-2<br>
+                        col-2<br>
+                    </div>
+                </div>
+                <div class="n-row" style="background: #b5c7dd;">
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                    <div class="n-col-1 n-col-2m n-col-4s">
+                        col-1<br>
+                        col-1<br>
+                        col-1<br>
+                    </div>
+                </div>
+            </div>
+            <!-- FINAL -->
+        </main>
+</div>
+</body>
+</html>

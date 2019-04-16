@@ -1,6 +1,32 @@
 var BaseURL = 'http://immsa.binarylemon.net/';
 function Modal_Cerrar() { $("#n-modal").fadeOut(); }
 
+jQuery(function ($) {
+    $(".n-menu-v-dropdown > a").click(function() 
+    {
+        $(".n-menu-v-submenu").slideUp(200);
+        if ($(this).parent().hasClass("active")) 
+        {
+            $(".n-menu-v-dropdown").removeClass("active");
+            $(this).parent().removeClass("active");
+        } 
+        else 
+        {
+            $(".n-menu-v-dropdown").removeClass("active");
+            $(this).next(".n-menu-v-submenu").slideDown(200);
+            $(this).parent().addClass("active");
+        }
+    });
+
+    $("#n-menu-v-close").click(function() {
+        $(".n-menu-v-page-container").removeClass("n-toggled");
+    });
+
+    $("#n-menu-v-show").click(function() {
+        $(".n-menu-v-page-container").addClass("n-toggled");
+    });
+});
+
 $(document).ready(function () {
     $('.Mensaje').click(Mensaje_Modal);
     $('#btnMenu').click(Menu);
