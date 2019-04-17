@@ -1,0 +1,78 @@
+.n-nav {
+    background-color: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    max-height: 64px;
+    margin-bottom: var(--margin);
+}
+.n-nav-logo {
+    padding: 10px 12px;
+    overflow: visible;
+}
+.n-nav-logo a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+.n-nav-logo img {
+    float: left;
+    height: 40px;
+    margin-right: 5px;
+}
+.n-nav-logo span {
+    display: flex;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    height: 40px;
+}
+.n-nav-menu {
+    position: relative;
+}
+.n-nav-menu ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+.n-nav-menu ul li {
+    height: 100%;
+    padding: 0.5rem 0.8rem;
+    /*min-width: 100px;*/
+}
+.n-nav-menu ul li:hover {
+    background-color: #D5D5D5;
+    border-bottom: 3px solid gray;
+}
+.n-nav-menu ul li.active {
+    background-color: #D5D5D5;
+    border-bottom: 3px solid gray;
+}
+.n-nav-menu ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.n-nav-menu .n-icon {
+    color: gray;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.n-nav-menu ul li .n-nav-label {
+    text-align: center;
+    display: block;
+}
+.n-nav-menu ul li {
+}
+
+
+.n-nav-user {
+    background-color: gray;
+    position: absolute;
+    right: 0;
+}
+.n-nav-user ul {
+    list-style: none;
+}

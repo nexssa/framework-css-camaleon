@@ -184,9 +184,16 @@ hr{
 /*Estilo de Colores*/
 
 /***********Inicio***********/
-.k-background-white {
-    background-color: #FFFFFF;
-}
+/*Colores de texto*/
+.n-color-white { color: #FFFFFF; }
+.n-color-blue { color: #0150C7; }
+/*Colores de fondo*/
+.n-color-bg-white { background-color: #FFFFFF; }
+.n-color-bg-blue { background-color: #0150C7; }
+/*Colores de bordes*/
+.n-color-bd-white { border-color: #FFFFFF; }
+.n-color-bd-blue { border-color: #0150C7; }
+
 .btn-color-default{
     border: 1px solid #C3C3C3;
     background-color: #DDDDDD;
@@ -338,6 +345,7 @@ input:focus {
 /*
 Menú de navegación (nav-bar)
 */
+/*
 .n-nav{
     background-color: #F0F0F0;
 }
@@ -357,7 +365,7 @@ Menú de navegación (nav-bar)
     background-color: #FFF;
     padding: 5px;
     display: block;
-}
+}*/
 /*
 FIN: Menú de navegación (nav-bar)
 */
@@ -365,6 +373,7 @@ FIN: Menú de navegación (nav-bar)
     body {
         background-color: #803594;
     }
+    /*
     .n-nav-items {
         display: none;
     }
@@ -375,6 +384,7 @@ FIN: Menú de navegación (nav-bar)
         display: block;
         padding: 8px;
     }
+    */
     .n-modal-header, .n-modal-body, .n-modal-footer{
         width: 210px;
     }

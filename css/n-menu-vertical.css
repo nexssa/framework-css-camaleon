@@ -258,14 +258,14 @@
     margin-right: 10px;
     font-size: 8px;
 }
-.n-menu-v-container .n-menu-v ul li a span.label,
+.n-menu-v-container .n-menu-v ul li a span.n-nav-label,
 .n-menu-v-container .n-menu-v ul li a span.badge {
     float: right;
     margin-top: 8px;
     margin-left: 5px;
 }
 .n-menu-v-container .n-menu-v .n-menu-v-dropdown .n-menu-v-submenu li a .badge,
-.n-menu-v-container .n-menu-v .n-menu-v-dropdown .n-menu-v-submenu li a .label {
+.n-menu-v-container .n-menu-v .n-menu-v-dropdown .n-menu-v-submenu li a .n-nav-label {
     float: right;
     margin-top: 0px;
 }
@@ -284,7 +284,7 @@
     padding-top: 1px;
     font-size: 11px;
 }
-.label{
+.n-nav-label{
 
 }
 
