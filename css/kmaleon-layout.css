@@ -12,6 +12,28 @@ Estructura base de contenedores, filas y columnas (adaptables)
   padding: 0;
   box-sizing: border-box; /*Asegrurarse que el margen interno (padding) y el borde formen parte del ancho total. */
 }
+/*DEFINICIÓN DEL LOS TEMAS*/
+/*
+            LIGHT THEME :: DEFAULT
+*/
+html, html[n-theme="n-light"] {
+    /*Elementos principales*/
+    --body-bg-color: #f0f0f0;
+    --body-color: #333333;
+    --container-bg-color: #f8f8f8;
+    --h-color: #333333;
+    /*Navigation bar (block)*/
+    --nav-bg-color: #f8f8f8;
+}
+html[n-theme="n-dark-green"] {
+    /*Elementos principales*/
+    --body-bg-color: #36393b;
+    --body-color: #ebebeb;
+    --container-bg-color: #3c3f41;
+    --h-color: #1bcd9d;
+    /*Navigation bar */
+    --nav-bg-color: #2d3032;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -28,7 +50,7 @@ video {
 {
     width: 100%;
     margin: auto;
-    background-color: #FFFFFF;
+    background-color: var(--container-bg-color);
 }
 .n-row {
     width: 100%;

@@ -32,7 +32,7 @@ $(document).ready(function () {
     $('#btnMenu').click(Menu);
 
     function Menu() {
-        $('.n-nav-items').toggle('height');
+        $('.n-nav-block-items').toggle('height');
     }
 
     function Mensaje_Modal() {

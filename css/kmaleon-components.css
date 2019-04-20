@@ -13,8 +13,8 @@ Variables globales (estructura, estilos y colores)
     --kolor-primary-hover: #0097E6;
 }
 body {
-    color:#333333;
-    background-color: #F2F2F2;
+    color: var(--body-color);
+    background-color: var(--body-bg-color);
     font-size: var(--font-size);
     font-family: var(--font-family);
     margin-top: 0;
@@ -46,6 +46,7 @@ code {
 ENCABEZADOS
 */
 h1, h2, h3, h4, h5 ,h6{
+    color: var(--h-color);
     font-weight: 600;
     letter-spacing: -0.035em;
     line-height: 1em;
@@ -346,13 +347,13 @@ input:focus {
 Menú de navegación (nav-bar)
 */
 /*
-.n-nav{
+.n-nav-block{
     background-color: #F0F0F0;
 }
-.n-nav-items {
+.n-nav-block-items {
     list-style: none;
 }
-.n-nav a {
+.n-nav-block a {
     text-decoration: none;
     color: #333333;
     padding: 5px;
@@ -360,7 +361,7 @@ Menú de navegación (nav-bar)
     list-style: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.n-nav a:hover {
+.n-nav-block a:hover {
     color: #000;
     background-color: #FFF;
     padding: 5px;
@@ -374,13 +375,13 @@ FIN: Menú de navegación (nav-bar)
         background-color: #803594;
     }
     /*
-    .n-nav-items {
+    .n-nav-block-items {
         display: none;
     }
-    .n-nav-items li {
+    .n-nav-block-items li {
         display: block;
     }
-    .n-nav-toggle {
+    .n-nav-block-toggle {
         display: block;
         padding: 8px;
     }
