@@ -23,7 +23,11 @@ html, html[n-theme="n-light"] {
     --container-bg-color: #f8f8f8;
     --h-color: #333333;
     /*Navigation bar (block)*/
+    --nav-color: gray;
+    --nav-color-hover: 000;
     --nav-bg-color: #f8f8f8;
+    --nav-border-item-hover: 3px solid gray;
+    --nav-border: 1px solid #D9DEE4;
 }
 html[n-theme="n-dark-green"] {
     /*Elementos principales*/
