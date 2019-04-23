@@ -1,17 +1,4 @@
-/*
-Variables globales (estructura, estilos y colores)
-*/
-:root {
-    /*Fuente principal*/
-    --font-size: 14px;
-    --font-family: sans-serif;
-    /*Márgenes externos e internos*/
-    --margin: 15px;
-    --padding: 15px;
-    /*Colores*/
-    --kolor-primary: #00A8FF;
-    --kolor-primary-hover: #0097E6;
-}
+
 body {
     color: var(--body-color);
     background-color: var(--body-bg-color);

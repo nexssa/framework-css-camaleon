@@ -80,7 +80,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="n-dropdown-menu n-menu-opened" data-target="#mnu-clientes">
+                                <a href="#" class="n-dropdown-menu" data-target="#mnu-clientes">
                                     <span class="n-icon fa fa-address-book"></span>
                                     <span class="n-nav-label">Clientes <span class="n-dropdown-icon fa fa-caret-down"></span></span>
                                 </a>
@@ -103,27 +103,48 @@
                         <ul>
                             <!--<li style="background-color: yellowgreen">-->
                             <li>
-                                <a href="#">
+                                <a href="#" class="n-dropdown-menu" data-target="#mnu-config">
                                     <span class="n-icon fa fa-cog"></span>
                                     <span class="n-nav-label">
                                         Config.<span class="n-dropdown-icon fa fa-caret-down"></span>
                                     </span>
-
                                 </a>
+                                <ul class="n-dropdown-menu" id="mnu-config">
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-user"></span> Roles
+                                    </a></li>
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-users"></span> Usuarios
+                                    </a></li>
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-key"></span> Permisos
+                                    </a></li>
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-clock"></span> Bitácora
+                                    </a></li>
+                                </ul>
                             </li>
                             <!--<li style="background-color: orange">-->
                             <li>
-                                <a href="#">
+                                <a href="#" class="n-dropdown-menu" data-target="#mnu-usuario">
                                     <span class="n-icon fa fa-user-circle"></span>
                                     <span class="n-nav-label">Administrador <span class="n-dropdown-icon fa fa-caret-down"></span></span>
                                 </a>
+                                <ul class="n-dropdown-menu" id="mnu-usuario">
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-user"></span> Perfil
+                                    </a></li>
+                                    <li><a href="">
+                                        <span class="n-icon-submenu fa fa-key"></span> Cambiar contraseña
+                                    </a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="n-nav-menu-toggle">
                     <button>
-                        MENU
+                        <span class="fa fa-bars"></span>
                     </button>
                 </div>
             </nav>
@@ -137,13 +158,19 @@
 
     <hr>
 
-    <div class="n-container">
-        <nav class="n-nav-block">
+    <div class="n-container-full">
+        <div class="n-row">
+            <div class="n-col-12">
+                <h3 class="">Menú en 12 columnas (inline compact)</h3>
+            </div>
+        </div>
+
+        <nav class="n-nav">
             <div class="n-nav-logo">
                 <a href="index.html">
                     <!--<img src="https://picsum.photos/64/64" alt="Logo">-->
                     <img src="img/logo-small.jpg" alt="Logo">
-                    <span>NEXSSA</span>
+                    <span></span>
                 </a>
             </div>
             <div class="n-nav-menu-container">
@@ -174,113 +201,22 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-money-bill-alt"></span>
-                                <span class="n-nav-label">Producción</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-cog"></span>
-                                <span class="n-nav-label">POS</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a href="#" class="n-dropdown-menu" data-target="#mnu-clientes3">
                                 <span class="n-icon fa fa-address-book"></span>
-                                <span class="n-nav-label">Terceros</span>
+                                <span class="n-nav-label">Clientes <span class="n-dropdown-icon fa fa-caret-down"></span></span>
                             </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="n-nav-user">
-                    <ul>
-                        <!--<li style="background-color: yellowgreen">-->
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-cog"></span>
-                                <span class="n-nav-label">Config. <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                        </li>
-                        <!--<li style="background-color: orange">-->
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-user-circle"></span>
-                                <span class="n-nav-label">Administrador <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="n-nav-menu-toggle">
-                <button>
-                    MENU
-                </button>
-            </div>
-        </nav>
-    </div>
-
-    <hr>
-
-    <div class="n-container-full">
-        <div class="n-row">
-            <div class="n-col-12">
-                <h3 class="">Menú en 12 columnas (inline compact)</h3>
-            </div>
-        </div>
-
-        <nav class="n-nav">
-            <div class="n-nav-logo">
-                <a href="index.html">
-                    <!--<img src="https://picsum.photos/64/64" alt="Logo">-->
-                    <img src="img/logo-small.jpg" alt="Logo">
-                    <span>NEXSSA</span>
-                </a>
-            </div>
-            <div class="n-nav-menu-container">
-                <div class="n-nav-menu">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-chart-line"></span>
-                                <span class="n-nav-label">Finanzas <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="#">
-                                <span class="n-icon fa fa-money-bill-alt"></span>
-                                <span class="n-nav-label">Contabilidad <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-id-card"></span>
-                                <span class="n-nav-label">RRHH <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="n-dropdown-menu n-menu-opened" data-target="#mnu-inventario">
-                                <span class="n-icon fa fa-shopping-cart"></span>
-                                <span class="n-nav-label">Inventario <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
-                            <ul class="n-dropdown-menu" id="mnu-inventario">
+                            <ul class="n-dropdown-menu" id="mnu-clientes3">
                                 <li><a href="">
-                                    <span class="n-icon-submenu fa fa-plus"></span> Nuevo producto
+                                    <span class="n-icon-submenu fa fa-plus"></span> Nuevo
                                 </a></li>
                                 <li><a href="">
-                                    <span class="n-icon-submenu fa fa-list-alt"></span> Administrar productos
+                                    <span class="n-icon-submenu fa fa-list-alt"></span> Administrar clientes
                                 </a></li>
                                 <li><div class="n-dropdown-divider"></div></li>
                                 <li><a href="">
-                                    <span class="n-icon-submenu fa fa-chart-pie"></span> Kardex
+                                    <span class="n-icon-submenu fa fa-chart-pie"></span> Reporte
                                 </a></li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="n-icon fa fa-money-bill-alt"></span>
-                                <span class="n-nav-label">Producción <span class="n-dropdown-icon fa fa-caret-down"></span></span>
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -288,26 +224,48 @@
                     <ul>
                         <!--<li style="background-color: yellowgreen">-->
                         <li>
-                            <a href="#">
+                            <a href="#" class="n-dropdown-menu" data-target="#mnu-config3">
                                 <span class="n-icon fa fa-cog"></span>
-                                <!--<span class="n-nav-label"></span>-->
-                                <span class="n-dropdown-icon fa fa-caret-down"></span>
+                                <span class="n-nav-label">
+                                        Config.<span class="n-dropdown-icon fa fa-caret-down"></span>
+                                    </span>
                             </a>
+                            <ul class="n-dropdown-menu" id="mnu-config3">
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-user"></span> Roles
+                                </a></li>
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-users"></span> Usuarios
+                                </a></li>
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-key"></span> Permisos
+                                </a></li>
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-clock"></span> Bitácora
+                                </a></li>
+                            </ul>
                         </li>
                         <!--<li style="background-color: orange">-->
                         <li>
-                            <a href="#">
+                            <a href="#" class="n-dropdown-menu" data-target="#mnu-usuario3">
                                 <span class="n-icon fa fa-user-circle"></span>
-                                <span class="n-nav-label">Administrador</span>
-                                <span class="n-dropdown-icon fa fa-caret-down"></span>
+                                <span class="n-nav-label">Administrador <span class="n-dropdown-icon fa fa-caret-down"></span></span>
                             </a>
+                            <ul class="n-dropdown-menu" id="mnu-usuario3">
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-user"></span> Perfil
+                                </a></li>
+                                <li><a href="">
+                                    <span class="n-icon-submenu fa fa-key"></span> Cambiar contraseña
+                                </a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="n-nav-menu-toggle">
                 <button>
-                    MENU
+                    <span class="fa fa-bars"></span>
                 </button>
             </div>
         </nav>
