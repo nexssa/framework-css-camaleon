@@ -1,16 +1,29 @@
 /*
-
-KMaleon Layout
---------------
-Estructura base de contenedores, filas y columnas (adaptables)
-
+Variables globales (estructura, estilos y colores)
 */
-
-/*Restableciendo todos los elementos*/
-*, ::after, ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /*Asegrurarse que el margen interno (padding) y el borde formen parte del ancho total. */
+:root {
+    /*
+    Fuente principal
+    */
+    --font-size: 14px;
+    --font-family: sans-serif;
+    /*
+    Márgenes externos e internos
+    */
+    --margin: 15px;
+    --padding: 15px;
+    /*
+    Colores generales
+    */
+    --color-primary: #00A8FF;
+    --color-primary-hover: #0097E6;
+    /*
+    Menú (puntos de ruptura: ocultar o mostrar menú según resoluciones mínimas establecidas)
+        --n-nav         : menú horizontal estándar
+        --n-nav-block   : menú horizontal en bloque
+    */
+    --n-nav-breakpoint: 1024px;
+    --n-nav-block-breakpoint: 960px;
 }
 /*DEFINICIÓN DEL LOS TEMAS*/
 /*
@@ -37,6 +50,20 @@ html[n-theme="n-dark-green"] {
     --h-color: #1bcd9d;
     /*Navigation bar */
     --nav-bg-color: #2d3032;
+}
+/*
+
+KMaleon Layout
+--------------
+Estructura base de contenedores, filas y columnas (adaptables)
+
+*/
+
+/*Restableciendo todos los elementos*/
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Asegrurarse que el margen interno (padding) y el borde formen parte del ancho total. */
 }
 img {
     max-width: 100%;

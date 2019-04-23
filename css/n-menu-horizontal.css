@@ -162,6 +162,11 @@
     flex-direction: row!important;
     margin-left: auto!important;
 }
+/* Evitar que el último menú de la derecha salga de la vista */
+.n-nav .n-nav-user ul li:last-child ul,
+.n-nav-block .n-nav-user ul li:last-child ul {
+    right: 0;
+}
 .n-nav ul.n-dropdown-menu,
 .n-nav-block ul.n-dropdown-menu
 {
@@ -181,6 +186,16 @@
 }
 .n-nav ul.n-dropdown-menu {
     border-top: var(--nav-border-item-hover);
+}
+/* Ocultar todos los submenúes */
+.n-nav ul.n-dropdown-menu,
+.n-nav-block ul.n-dropdown-menu {
+    display: none;
+}
+/* Mostrar submenú marcado como "abierto" (n-menu-opened) */
+.n-nav .n-menu-opened + ul.n-dropdown-menu,
+.n-nav-block .n-menu-opened + ul.n-dropdown-menu {
+    display: table;
 }
 .n-nav ul.n-dropdown-menu li a,
 .n-nav-block ul.n-dropdown-menu li a
@@ -208,27 +223,8 @@
 }
 
 /*
-.n-nav-block .n-nav-user ul {
-    list-style: none;
-    display: flex;
-    height: 100%;
-}
-.n-nav-block .n-nav-user ul li {
-    height: 100%;
-}
-.n-nav-block .n-nav-user ul li a {
-    padding: 0.5rem 0.8rem;
-    text-decoration: none;
-    display: block;
-}
-.n-nav-block .n-nav-user .n-icon {
-    color: gray;
-    display: block;
-    margin-bottom: 0.3rem;
-    font-size: 1.5rem;
-    text-align: center;
-}*/
-
+Adaptabilidad
+*/
 .n-nav-menu-toggle {
     display: none;
     background-color: gray;
@@ -236,99 +232,55 @@
     flex-direction: row!important;
     margin-left: auto!important;
 }
-
-
-/*
-.n-nav-block {
+.n-nav-menu-toggle button {
+    height: 100%;
+    width: 64px;
+    font-size: 1.5rem;
+    color: var(--nav-color);
     background-color: var(--nav-bg-color);
-    border-bottom: 1px solid #D9DEE4;
-    display: flex;
-    width: 100%;
-    height: 64px;
-    max-height: 64px;
-    margin-bottom: var(--margin);
+    border: none;
 }
-.n-nav-block-logo {
-    padding: 10px 12px;
-    overflow: visible;
-    flex-direction: row!important;
+
+/*Estilos para dispositivos móviles*/
+@media only screen and (max-width: 1024px) {
+    /*Mostrar botón de menú*/
+    .n-nav .n-nav-menu-toggle {
+        display: block;
+    }
+    /*Ocultando menú*/
+    .n-nav .n-nav-menu-container {
+        display: none;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: 80vh;
+        background-color: white;
+    }
 }
-.n-nav-block-logo a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
+/*Estilos para dispositivos móviles*/
+@media only screen and (max-width: 768px) {
+    /*Mostrar botón de menú*/
+    .n-nav-block .n-nav-menu-toggle {
+        display: block;
+    }
+    /*Ocultando menú*/
+    .n-nav-block .n-nav-menu-container {
+        display: none;
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        height: 80vh;
+        background-color: white;
+    }
+    .n-nav-block .n-nav-menu ul,
+    .n-nav-block .n-nav-user ul:first-child {
+        display: block;
+    }
+    .n-nav-block .n-nav-menu ul li,
+    .n-nav-block .n-nav-user ul:first-child li {
+        display: block;
+        float: left;
+        width: 128px;
+        height: 128px;
+    }
 }
-.n-nav-block-logo img {
-    float: left;
-    height: 40px;
-    margin-right: 5px;
-}
-.n-nav-block-logo span {
-    display: flex;
-    padding: 0.4rem;
-    font-size: 1.5rem;
-    height: 40px;
-}
-.n-nav-block-menu {
-    position: relative;
-    flex-direction: row!important;
-}
-.n-nav-block-menu-container {
-    display: flex;
-    flex-direction: row!important;
-    right: 0;
-    width: 100%;
-    margin-left: 50px;
-}
-.n-nav-block-menu ul {
-    list-style: none;
-    display: flex;
-    height: 100%;
-}
-.n-nav-block-menu ul li {
-    height: 100%;
-}
-.n-nav-block-menu ul li:hover {
-}
-.n-nav-block-menu ul li.active a {
-    border-bottom: 3px solid gray;
-    background-color: #E5E5E5;
-}
-.n-nav-block-menu ul li a {
-    padding: 0.5rem 0.8rem;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-.n-nav-block-menu ul li a:hover {
-    background-color: #E5E5E5;
-    border-bottom: 3px solid gray;
-}
-.n-nav-block-menu .n-icon {
-    color: gray;
-    display: block;
-    margin-bottom: 0.3rem;
-    font-size: 1.5rem;
-    text-align: center;
-}
-.n-nav-block-menu ul li .n-nav-block-label {
-    text-align: center;
-    display: block;
-}
-.n-nav-block-user {
-    background-color: gray;
-    right: 0;
-    flex-direction: row!important;
-    margin-left: auto!important;
-}
-.n-nav-block-user ul {
-    list-style: none;
-}
-.n-nav-block-menu-toggle {
-    display: none;
-    background-color: gray;
-    right: 0;
-    flex-direction: row!important;
-    margin-left: auto!important;
-}
-*/
