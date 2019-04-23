@@ -4,7 +4,7 @@
 $(document).ready(function()
 {
     // Menú horizontal (cerrar todos los menú abiertos al pulsar en otros elementos)
-    $('a.n-dropdown-menu').blur(n_dropdown_menu_close);
+    // $('a.n-dropdown-menu').blur(n_dropdown_menu_close);
     function n_dropdown_menu_close()
     {
         // Quitar las clases de enlaces que establecen los menús como activos (abierto)
@@ -16,16 +16,16 @@ $(document).ready(function()
     // $(document).keyup(n_dropdown_menu_close_esc);
     // function n_dropdown_menu_close_esc(event)
     // {
-    //     // if (event.which == 27) {
-    //     //     n_dropdown_menu_close();
-    //     // }
+        // if (event.which == 27) {
+        //     n_dropdown_menu_close();
+        // }
     // }
+    // $(':not(a.n-dropdown-menu)').click(n_dropdown_menu_close);
     // Menú horizontal (apertura y cierre de sub menú)
     $('a.n-dropdown-menu').click(n_dropdown_menu);
     function n_dropdown_menu(event)
     {
         event.preventDefault();
-        n_dropdown_menu_close();
         var submenu = $(this).attr('data-target');
         if ($(this).hasClass('n-menu-opened'))
         {
@@ -33,6 +33,7 @@ $(document).ready(function()
             $(submenu).hide();
         }
         else {
+            n_dropdown_menu_close();
             $(this).addClass('n-menu-opened');
             $(submenu).show();
         }
