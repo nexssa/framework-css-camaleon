@@ -160,24 +160,65 @@ hr{
 }
 /***********Final***********/
 
+/*Estilo de panel*/
+/***********Inicio***********/
+.n-panel{
+    width: 100%;
+}
+.n-panel-header {
+    background-color: #FFFFFF;
+    padding: 13px 13px 13px 13px;
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333333;
+    margin: 0 auto;
+}
+.n-panel-title {
+    font-size: 16px;
+    margin: 0px;
+}
+.n-panel-body {
+    background-color: #FFFFFF;
+    padding: 13px 13px 13px 13px;
+    margin: 0 auto;
+}
+.n-panel-footer {
+    background-color: #F5F5F5;
+    padding: 13px 13px 13px 13px;
+    border-radius: 0px 0px 4px 4px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.n-panel-close {
+    float: right;
+    right: 15px;
+    top: 15px;
+    color: #333333;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 10px;
+    text-decoration: none;
+}
+/***********Final***********/
+
 /*Estilo de Textos*/
 /***********Inicio***********/
-.cl-text-left{
+.n-text-left{
     text-align: left;
 }
-.cl-text-right{
+.n-text-right{
     text-align: right;
 }
-.cl-text-justify{
+.n-text-justify{
     text-align: justify;
 }
-.cl-text-center{
+.n-text-center{
     text-align: center;
 }
-.cl-text-bold{    
+.n-text-bold{    
     font-weight: bold; 
 }
-.cl-text-uppercase{
+.n-text-uppercase{
     text-transform: uppercase;
 }
 /***********Final***********/

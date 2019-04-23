@@ -79,4 +79,6 @@ $(document).ready(function () {
         //Mostrar formulario
         $("#n-modal").fadeIn();
     }
+    
+    $('#n-modal .n-modal-content').draggable( { handle: ".n-modal-header", cursor: "move" });
 });
