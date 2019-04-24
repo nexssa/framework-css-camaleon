@@ -241,7 +241,7 @@ Adaptabilidad
     border: none;
 }
 
-/*Estilos para dispositivos móviles*/
+/*Menú (estándar) - Máx 1024 - Estilos para dispositivos móviles*/
 @media only screen and (max-width: 1024px) {
     /*Mostrar botón de menú*/
     .n-nav .n-nav-menu-toggle {
@@ -256,9 +256,13 @@ Adaptabilidad
         height: 80vh;
         background-color: white;
     }
+    /*Clase para mostrar el menú móvil*/
+    .n-nav .n-nav-mobile-active {
+        display: block;
+    }
 }
-/*Estilos para dispositivos móviles*/
-@media only screen and (max-width: 768px) {
+/*Menú (block) - Máx 768 - Estilos para dispositivos móviles*/
+@media only screen and (max-width: 1024px) {
     /*Mostrar botón de menú*/
     .n-nav-block .n-nav-menu-toggle {
         display: block;
@@ -272,15 +276,26 @@ Adaptabilidad
         height: 80vh;
         background-color: white;
     }
-    .n-nav-block .n-nav-menu ul,
-    .n-nav-block .n-nav-user ul:first-child {
+
+    /*Clase para mostrar el menú móvil*/
+    .n-nav-block .n-nav-mobile-active {
         display: block;
     }
-    .n-nav-block .n-nav-menu ul li,
-    .n-nav-block .n-nav-user ul:first-child li {
-        display: block;
-        float: left;
-        width: 128px;
-        height: 128px;
-    }
+
+    /*.n-nav-block .n-nav-menu ul,*/
+    /*.n-nav-block .n-nav-user ul:first-child {*/
+        /*display: block;*/
+    /*}*/
+    /*.n-nav-block .n-nav-menu ul li,*/
+    /*.n-nav-block .n-nav-user ul:first-child li {*/
+        /*display: block;*/
+        /*float: left;*/
+        /*width: 128px;*/
+        /*height: 128px;*/
+    /*}*/
+}
+
+/*Estilos para equipos de escritorio */
+@media only screen and (min-width: 1024px)
+{
 }

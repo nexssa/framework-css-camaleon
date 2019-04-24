@@ -39,10 +39,22 @@ $(document).ready(function()
         }
     }
 
+    // Mostrar y ocultar el menú mobil en resoluciones bajas a través del botón MENU
     $('.n-nav .n-nav-menu-toggle button').click(n_dropdown_mobile);
     $('.n-nav-block .n-nav-menu-toggle button').click(n_dropdown_mobile);
     function n_dropdown_mobile()
     {
-        $(this).parent().parent().find('.n-nav-menu-container').toggle();
+        var menu_container = $(this).parent().parent().find('.n-nav-menu-container');
+        if ($(menu_container).hasClass('n-nav-mobile-active'))
+        {
+            $(menu_container).removeClass('n-nav-mobile-active');
+            $(this).removeClass('fa-window-close');
+            $(this).addClass('fa-bars');
+        }
+        else {
+            $(menu_container).addClass(('n-nav-mobile-active'));
+            $(this).removeClass('fa-bars');
+            $(this).addClass('fa-window-close');
+        }
     }
 });
