@@ -1,7 +1,6 @@
 * {
     --border: 1px dashed red;
 }
-
 /* Menú compacto (desplegable) */
 .n-nav {
     height: 50px;
@@ -45,188 +44,9 @@
     font-size: 1.5rem;
     height: 40px;
 }
-.n-nav-menu-container {
-    display: flex;
-    flex-direction: row!important;
-    right: 0;
-    width: 100%;
-    margin-left: 50px;
-}
-.n-nav-block .n-nav-menu,
-.n-nav-block .n-nav-user
-{
-    position: relative;
-    flex-direction: row!important;
-}
-.n-nav-menu ul,
-.n-nav-user ul
-{
-    list-style: none;
-    display: flex;
-    height: 100%;
-}
-.n-nav-menu ul li,
-.n-nav-user ul li
-{
-    height: 100%;
-}
-.n-nav .n-nav-menu ul li.active a,
-.n-nav .n-nav-user ul li.active a
-{
-    font-weight: bold;
-}
-.n-nav-block .n-nav-menu ul li.active a,
-.n-nav-block .n-nav-user ul li.active a
-{
-    border-bottom: var(--nav-border-item-hover);
-    background-color: #E5E5E5;
-}
-.n-nav .n-nav-menu ul li a,
-.n-nav .n-nav-user ul li a
-{
-    padding: 0.8rem 0.8rem;
-    text-decoration: none;
-    color: inherit;
-    display: inline-flex;
-}
-.n-nav-block .n-nav-menu ul li a,
-.n-nav-block .n-nav-user ul li a
-{
-    padding: 0.5rem 0.8rem;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-.n-nav .n-nav-menu ul li a:hover,
-.n-nav .n-nav-menu ul li a:hover .n-icon,
-.n-nav .n-nav-user ul li a:hover,
-.n-nav .n-nav-user ul li a:hover .n-icon
-{
-    color: #108100;
-}
-.n-nav-block .n-nav-menu ul li a:hover,
-.n-nav-block .n-nav-user ul li a:hover,
-.n-nav-block .n-menu-opened
-{
-    background-color: var(--nav-bg-color);
-    border-bottom: var(--nav-border-item-hover);
-}
-.n-nav .n-nav-menu .n-icon,
-.n-nav .n-nav-user .n-icon
-{
-    margin-right: 5px;
-    color: gray;
-    display: block;
-    font-size: 1.2rem;
-    text-align: center;
-    padding-top: 3px;
-}
-/*.n-nav .n-nav-user .n-icon:last-child {*/
-    /*margin-right: 0;*/
-/*}*/
-.n-nav-block .n-nav-menu .n-icon,
-.n-nav-block .n-nav-user .n-icon {
-    color: gray;
-    display: block;
-    margin-bottom: 0.3rem;
-    font-size: 1.5rem;
-    text-align: center;
-}
-.n-nav .n-nav-menu .n-dropdown-icon,
-.n-nav .n-nav-user .n-dropdown-icon
-{
-    display: inline;
-    padding-top: 5px;
-}
-.n-nav .n-nav-menu ul li .n-nav-label,
-.n-nav .n-nav-user ul li .n-nav-label
-{
-    padding: 4px;
-    font-size: 1rem;
-    text-align: center;
-    display: block;
-}
-.n-nav-block .n-nav-menu ul li .n-nav-label,
-.n-nav-block .n-nav-user ul li .n-nav-label
-{
-    text-align: center;
-    display: block;
-}
-.n-nav .n-nav-user {
-    right: 0;
-    flex-direction: row!important;
-    margin-left: auto!important;
-}
-.n-nav-block .n-nav-user {
-    right: 0;
-    flex-direction: row!important;
-    margin-left: auto!important;
-}
-/* Evitar que el último menú de la derecha salga de la vista */
-.n-nav .n-nav-user ul li:last-child ul,
-.n-nav-block .n-nav-user ul li:last-child ul {
-    right: 0;
-}
-.n-nav ul.n-dropdown-menu,
-.n-nav-block ul.n-dropdown-menu
-{
-    background-color: var(--nav-bg-color);
-    border: var(--nav-border);
-    border-radius: 0 0 5px 5px;
-    position: absolute;
-    display: table;
-    white-space: nowrap;
-    z-index: 500;
-    height: auto;
-}
-.n-nav ul.n-dropdown-menu .n-icon-submenu,
-.n-nav-block ul.n-dropdown-menu .n-icon-submenu
-{
-    margin-right: 5px;
-}
-.n-nav ul.n-dropdown-menu {
-    border-top: var(--nav-border-item-hover);
-}
-/* Ocultar todos los submenúes */
-.n-nav ul.n-dropdown-menu,
-.n-nav-block ul.n-dropdown-menu {
-    display: none;
-}
-/* Mostrar submenú marcado como "abierto" (n-menu-opened) */
-.n-nav .n-menu-opened + ul.n-dropdown-menu,
-.n-nav-block .n-menu-opened + ul.n-dropdown-menu {
-    display: table;
-}
-.n-nav ul.n-dropdown-menu li a,
-.n-nav-block ul.n-dropdown-menu li a
-{
-    color: var(--nav-color);
-    padding: 8px 12px;
-}
-.n-nav ul.n-dropdown-menu li a:hover,
-.n-nav-block ul.n-dropdown-menu li a:hover
-{
-    color: var(--nav-color-hover);
-    border: none;
-    background-color: var(--nav-bg-color);
-}
 
-.n-nav .n-dropdown-divider,
-.n-nav-block .n-dropdown-divider
-{
-    background-color: yellow;
-    width: 100%;
-    display: block;
-    height: 0;
-    border-bottom: 1px solid #d9dee4;
-    margin: 3px 0;
-}
-
-/*
-Adaptabilidad
-*/
+/*Botón de menú móvil*/
 .n-nav-menu-toggle {
-    display: none;
     background-color: gray;
     right: 0;
     flex-direction: row!important;
@@ -241,10 +61,197 @@ Adaptabilidad
     border: none;
 }
 
-/*Menú (estándar) - Máx 1024 - Estilos para dispositivos móviles*/
-@media only screen and (max-width: 1024px) {
-    /*Mostrar botón de menú*/
+/*Menú (Desktop)*/
+@media only screen and (min-width: 1024px)
+{
+    /*Ocultar menú móvil en equipos de escritorio*/
+    .n-nav-menu-toggle {
+        display: none;
+    }
+    .n-nav-menu-container {
+        display: flex;
+        flex-direction: row!important;
+        right: 0;
+        width: 100%;
+        margin-left: 50px;
+    }
+    .n-nav-block .n-nav-menu,
+    .n-nav-block .n-nav-user
+    {
+        position: relative;
+        flex-direction: row!important;
+    }
+    .n-nav-menu ul,
+    .n-nav-user ul
+    {
+        list-style: none;
+        display: flex;
+        height: 100%;
+    }
+    .n-nav-menu ul li,
+    .n-nav-user ul li
+    {
+        height: 100%;
+    }
+    .n-nav .n-nav-menu ul li.active a,
+    .n-nav .n-nav-user ul li.active a
+    {
+        font-weight: bold;
+    }
+    .n-nav-block .n-nav-menu ul li.active a,
+    .n-nav-block .n-nav-user ul li.active a
+    {
+        border-bottom: var(--nav-border-item-hover);
+        background-color: #E5E5E5;
+    }
+    .n-nav .n-nav-menu ul li a,
+    .n-nav .n-nav-user ul li a
+    {
+        padding: 0.8rem 0.8rem;
+        text-decoration: none;
+        color: inherit;
+        display: inline-flex;
+    }
+    .n-nav-block .n-nav-menu ul li a,
+    .n-nav-block .n-nav-user ul li a
+    {
+        padding: 0.5rem 0.8rem;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    .n-nav .n-nav-menu ul li a:hover,
+    .n-nav .n-nav-menu ul li a:hover .n-icon,
+    .n-nav .n-nav-user ul li a:hover,
+    .n-nav .n-nav-user ul li a:hover .n-icon
+    {
+        color: #108100;
+    }
+    .n-nav-block .n-nav-menu ul li a:hover,
+    .n-nav-block .n-nav-user ul li a:hover,
+    .n-nav-block .n-menu-opened
+    {
+        background-color: var(--nav-bg-color);
+        border-bottom: var(--nav-border-item-hover);
+    }
+    .n-nav .n-nav-menu .n-icon,
+    .n-nav .n-nav-user .n-icon
+    {
+        margin-right: 5px;
+        color: gray;
+        display: block;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-top: 3px;
+    }
+    /*.n-nav .n-nav-user .n-icon:last-child {*/
+    /*margin-right: 0;*/
+    /*}*/
+    .n-nav-block .n-nav-menu .n-icon,
+    .n-nav-block .n-nav-user .n-icon {
+        color: gray;
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .n-nav .n-nav-menu .n-dropdown-icon,
+    .n-nav .n-nav-user .n-dropdown-icon
+    {
+        display: inline;
+        padding-top: 5px;
+    }
+    .n-nav .n-nav-menu ul li .n-nav-label,
+    .n-nav .n-nav-user ul li .n-nav-label
+    {
+        padding: 4px;
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+    }
+    .n-nav-block .n-nav-menu ul li .n-nav-label,
+    .n-nav-block .n-nav-user ul li .n-nav-label
+    {
+        text-align: center;
+        display: block;
+    }
+    .n-nav .n-nav-user {
+        right: 0;
+        flex-direction: row!important;
+        margin-left: auto!important;
+    }
+    .n-nav-block .n-nav-user {
+        right: 0;
+        flex-direction: row!important;
+        margin-left: auto!important;
+    }
+    /* Evitar que el último menú de la derecha salga de la vista */
+    .n-nav .n-nav-user ul li:last-child ul,
+    .n-nav-block .n-nav-user ul li:last-child ul {
+        right: 0;
+    }
+    .n-nav ul.n-dropdown-menu,
+    .n-nav-block ul.n-dropdown-menu
+    {
+        background-color: var(--nav-bg-color);
+        border: var(--nav-border);
+        border-radius: 0 0 5px 5px;
+        position: absolute;
+        display: table;
+        white-space: nowrap;
+        z-index: 500;
+        height: auto;
+    }
+    .n-nav ul.n-dropdown-menu .n-icon-submenu,
+    .n-nav-block ul.n-dropdown-menu .n-icon-submenu
+    {
+        margin-right: 5px;
+    }
+    .n-nav ul.n-dropdown-menu {
+        border-top: var(--nav-border-item-hover);
+    }
+    /* Ocultar todos los submenúes */
+    .n-nav ul.n-dropdown-menu,
+    .n-nav-block ul.n-dropdown-menu {
+        display: none;
+    }
+    /* Mostrar submenú marcado como "abierto" (n-menu-opened) */
+    .n-nav .n-menu-opened + ul.n-dropdown-menu,
+    .n-nav-block .n-menu-opened + ul.n-dropdown-menu {
+        display: table;
+    }
+    .n-nav ul.n-dropdown-menu li a,
+    .n-nav-block ul.n-dropdown-menu li a
+    {
+        color: var(--nav-color);
+        padding: 8px 12px;
+    }
+    .n-nav ul.n-dropdown-menu li a:hover,
+    .n-nav-block ul.n-dropdown-menu li a:hover
+    {
+        color: var(--nav-color-hover);
+        border: none;
+        background-color: var(--nav-bg-color);
+    }
+
+    .n-nav .n-dropdown-divider,
+    .n-nav-block .n-dropdown-divider
+    {
+        background-color: yellow;
+        width: 100%;
+        display: block;
+        height: 0;
+        border-bottom: 1px solid #d9dee4;
+        margin: 3px 0;
+    }
+}
+/*Menú (estándar y de bloque) - Máx 1024 - Estilos para dispositivos móviles*/
+@media only screen and (max-width: 1023px) {
+    /*Mostrar botón de menú móvil*/
     .n-nav .n-nav-menu-toggle {
+        display: block;
+    }
+    .n-nav-block .n-nav-menu-toggle {
         display: block;
     }
     /*Ocultando menú*/
@@ -253,49 +260,124 @@ Adaptabilidad
         position: absolute;
         top: 50px;
         width: 100%;
-        height: 80vh;
         background-color: white;
     }
-    /*Clase para mostrar el menú móvil*/
-    .n-nav .n-nav-mobile-active {
-        display: block;
-    }
-}
-/*Menú (block) - Máx 768 - Estilos para dispositivos móviles*/
-@media only screen and (max-width: 1024px) {
-    /*Mostrar botón de menú*/
-    .n-nav-block .n-nav-menu-toggle {
-        display: block;
-    }
-    /*Ocultando menú*/
     .n-nav-block .n-nav-menu-container {
         display: none;
         position: absolute;
         top: 64px;
         width: 100%;
-        height: 80vh;
+        /*height: 80vh;*/
         background-color: white;
     }
-
-    /*Clase para mostrar el menú móvil*/
+    /*Menú de sistema*/
+    .n-nav-menu,
+    .n-nav-user {
+        width: 100%;
+        display: flex;
+    }
+    .n-nav-user {
+        /*border-top: 5px solid #f7f7f7;*/
+        margin-top: var(--margin);
+    }
+    /*Clase para mostrar el menú móvil (agregado a n-nav-menu-container */
+    .n-nav .n-nav-mobile-active {
+        display: block;
+    }
     .n-nav-block .n-nav-mobile-active {
         display: block;
     }
-
-    /*.n-nav-block .n-nav-menu ul,*/
-    /*.n-nav-block .n-nav-user ul:first-child {*/
-        /*display: block;*/
-    /*}*/
-    /*.n-nav-block .n-nav-menu ul li,*/
-    /*.n-nav-block .n-nav-user ul:first-child li {*/
-        /*display: block;*/
-        /*float: left;*/
-        /*width: 128px;*/
-        /*height: 128px;*/
-    /*}*/
+    /*Elementos del menú*/
+    .n-nav .n-nav-menu ul li,
+    .n-nav-block .n-nav-menu ul li,
+    .n-nav .n-nav-user ul li,
+    .n-nav-block .n-nav-user ul li
+    {
+        width: 25vw;
+        min-width: 25vw;
+        max-width: 10rem;
+        height: 6rem;
+        font-size: 1rem;
+        /*background-color: #8080805c;*/
+        float: left;
+        display: inline-block;
+        text-align: center;
+    }
+    /*Enlaces del menú móvil*/
+    .n-nav .n-nav-menu ul li a,
+    .n-nav-block .n-nav-menu ul li a,
+    .n-nav .n-nav-user ul li a,
+    .n-nav-block .n-nav-user ul li a
+    {
+        color: inherit;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: var(--nav-border);
+    }
+    /*Íconos de enlaces del menú móvil*/
+    .n-nav .n-nav-menu ul li a .n-icon,
+    .n-nav-block .n-nav-menu ul li a .n-icon,
+    .n-nav .n-nav-user ul li a .n-icon,
+    .n-nav-block .n-nav-user ul li a .n-icon
+    {
+        /*background: yellow;*/
+        color: gray;
+        font-size: 1.8rem;
+        display: inline-block;
+        width: 100%;
+        padding-top: 1.1rem;
+    }
+    /*Etiquetas/texto de los enlaces del menú*/
+    .n-nav .n-nav-menu ul li a .n-nav-label,
+    .n-nav-block .n-nav-menu ul li a .n-nav-label,
+    .n-nav .n-nav-user ul li a .n-nav-label,
+    .n-nav-block .n-nav-user ul li a .n-nav-label
+    {
+        /*background: #dada52;*/
+        display: inline-block;
+        width: 100%;
+    }
+    /*Menú desplegable (sub menú)*/
+    .n-nav ul.n-dropdown-menu,
+    .n-nav-block ul.n-dropdown-menu {
+        background: yellow;
+        flex-direction: column;
+        min-width: 15rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    .n-nav ul.n-dropdown-menu li,
+    .n-nav-block ul.n-dropdown-menu li {
+        display: contents;
+        width: 10px;
+    }
+    .n-nav ul.n-dropdown-menu li a,
+    .n-nav-block ul.n-dropdown-menu li a {
+        text-align: left;
+        padding: 10px;
+        text-decoration: none;
+    }
 }
-
-/*Estilos para equipos de escritorio */
-@media only screen and (min-width: 1024px)
+/*Menú estándar y de bloque (máximo: 480px)*/
+@media only screen and (max-width: 480px)
 {
+    /*Elementos del menú*/
+    .n-nav .n-nav-menu ul li,
+    .n-nav-block .n-nav-menu ul li,
+    .n-nav .n-nav-user ul li,
+    .n-nav-block .n-nav-user ul li
+    {
+        width: 33.33vw;
+        min-width: 33.33vw;
+        /*max-width: 10rem;*/
+        /*height: 6rem;*/
+        /*font-size: 1rem;*/
+        /*float: left;*/
+        /*display: inline-block;*/
+        /*text-align: center;*/
+    }
 }
