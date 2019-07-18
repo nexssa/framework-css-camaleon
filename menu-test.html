@@ -1,0 +1,88 @@
+<script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
+<div class="n-nav-submenu">
+  <a href="#" class="n-dropdown-button button" data-target="#mnu-clientes">
+    <span class="n-icon fa fa-address-book"></span>
+    <span class="n-nav-label">Clientes <span class="n-dropdown-icon fa fa-caret-down"></span></span>
+  </a>
+  <ul class="n-dropdown-menu" id="mnu-clientes">
+    <li><a href="index.html">
+      <span class="n-icon-submenu fa fa-plus"></span> Nuevo
+      </a></li>
+    <li><a href="">
+      <span class="n-icon-submenu fa fa-list-alt"></span> Administrar clientes
+      </a></li>
+    <li><div class="n-dropdown-divider"></div></li>
+    <li><a href="">
+      <span class="n-icon-submenu fa fa-chart-pie"></span> Reporte
+      </a></li>
+  </ul>
+</div>
+                                
+<div class="n-nav-submenu">
+
+  <a class="n-dropdown-button button">Roles</a>
+
+  <ul class="n-dropdown-menu">
+    <li><a class="nav-item">Nuevo</a></li>
+    <li><a class="nav-item">Actualizar</a></li>
+    <li><a class="nav-item">Bloquear</a></li>
+  </ul>
+</div>
+
+
+<div class="n-nav-submenu">
+
+  <a class="n-dropdown-button button">Usuarios</a>
+
+  <ul class="n-dropdown-menu">
+    <li><a class="nav-item">Nuevo</a></li>
+    <li><a class="nav-item">Actualizar</a></li>
+    <li><a class="nav-item">Bloquear</a></li>
+  </ul>
+</div>
+
+<style type="text/css">
+  .n-nav-submenu {
+  float: left;
+}
+.button {
+  padding: 10px;
+  margin: 10px;
+}
+
+.n-dropdown-menu {
+  box-shadow: 0 0 2px #777;
+  display: none;
+  left: 0;
+  position: absolute;
+  padding: 2px;
+  z-index: 10;
+}
+.n-dropdown-menu a {
+  font-size: 12px;
+  padding: 10px;
+}
+.n-dropdown-menu.n-menu-opened {
+  display: block;
+}
+</style>
+
+<script type="text/javascript">
+  $('.n-nav-submenu .n-dropdown-button, .n-nav-submenu span').on('click', (event) => {
+  $(event.target).siblings('.n-dropdown-menu')
+    .toggleClass('n-menu-opened');
+});
+
+$('.n-dropdown-button span').click(function(event){
+  $(this).parents('.n-nav-submenu').find('.n-dropdown-menu')
+    .toggleClass('n-menu-opened');
+});
+
+$(document).click(function(e) {
+  $('.n-nav-submenu')
+    .not($('.n-nav-submenu').has($(e.target)))
+    .children('.n-dropdown-menu')
+    .removeClass('n-menu-opened');
+});
+
+</script>

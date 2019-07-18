@@ -61,7 +61,13 @@
     border: none;
 }
 
-/*Menú (Desktop)*/
+/*
+
+Menú (Desktop)
+##################################################################
+
+
+*/
 @media only screen and (min-width: 1024px)
 {
     /*Ocultar menú móvil en equipos de escritorio*/
@@ -120,6 +126,25 @@
         color: inherit;
         display: block;
     }
+
+
+
+
+
+
+    /*.n-nav-menu ul li a:focus + ul.n-dropdown-menu,*/
+    /*.n-nav-user ul li a:focus-within + ul.n-dropdown-menu,*/
+    /*ul.n-dropdown-menu li a:hover > .n-nav-menu ul li,*/
+    /*ul.n-dropdown-user li a:hover > .n-nav-menu ul li*/
+    /*{*/
+        /*display: block;*/
+    /*}*/
+
+
+
+
+
+
     .n-nav .n-nav-menu ul li a:hover,
     .n-nav .n-nav-menu ul li a:hover .n-icon,
     .n-nav .n-nav-user ul li a:hover,
@@ -225,6 +250,7 @@
     {
         color: var(--nav-color);
         padding: 8px 12px;
+        display: block;
     }
     .n-nav ul.n-dropdown-menu li a:hover,
     .n-nav-block ul.n-dropdown-menu li a:hover

@@ -81,4 +81,43 @@ $(document).ready(function () {
     }
     
     $('#n-modal .n-modal-content').draggable( { handle: ".n-modal-header", cursor: "move" });
-});
+
+
+}); // END - Document.Ready.Function
+
+/*
+Dropdown Menu
+==============================================================================
+*/
+// Elementos del menú estándar (sin íconos o etiquetas dentro del <a>)
+// $('.n-nav-submenu .n-dropdown-button').on('click', (event) => {
+//         $(event.target).siblings('.n-dropdown-menu').toggleClass('n-menu-opened');
+//         alert('a clicked');
+//     }
+// );
+// // Elementos del menú de bloque (n-block) con íconos y etiquetas dentro del <a>
+// $('.n-dropdown-button span').click(function(event){
+//     $(this).parents('.n-nav-submenu').find('.n-dropdown-menu').toggleClass('n-menu-opened');
+//     alert('span clicked');
+// });
+// // $('a.n-dropdown-menu').click(function()
+// // {
+// //     event.preventDefault();
+// //     var submenu = $(this).attr('data-target');
+// //     if (!$(this).hasClass('n-menu-opened'))
+// //     {
+// //         $(this).addClass('n-menu-opened');
+// //         $(this).next('ul').addClass('n-menu-opened');
+// //     }
+// // });
+// $(document).click(function(e) 
+// {
+//     $('.n-nav-submenu')
+//         .not($('.n-nav-submenu').has($(e.target)))
+//         .children('.n-dropdown-menu')
+//         .removeClass('n-menu-opened');
+// });
+/*
+END - Dropdown Menu
+==============================================================================
+*/
