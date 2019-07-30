@@ -1,12 +1,12 @@
 * {
     --border: 1px dashed red;
 }
-/* Menú compacto (desplegable) */
+/* MenÃº compacto (desplegable) */
 .n-nav {
     height: 50px;
     max-height: 50px;
 }
-/* Menú en bloque (módulos) */
+/* MenÃº en bloque (mÃ³dulos) */
 .n-nav-block {
     height: 64px;
     max-height: 64px;
@@ -45,7 +45,7 @@
     height: 40px;
 }
 
-/*Botón de menú móvil*/
+/*BotÃ³n de menÃº mÃ³vil*/
 .n-nav-menu-toggle {
     background-color: gray;
     right: 0;
@@ -63,14 +63,14 @@
 
 /*
 
-Menú (Desktop)
+MenÃº (Desktop)
 ##################################################################
 
 
 */
 @media only screen and (min-width: 1024px)
 {
-    /*Ocultar menú móvil en equipos de escritorio*/
+    /*Ocultar menÃº mÃ³vil en equipos de escritorio*/
     .n-nav-menu-toggle {
         display: none;
     }
@@ -210,7 +210,7 @@ Menú (Desktop)
         flex-direction: row!important;
         margin-left: auto!important;
     }
-    /* Evitar que el último menú de la derecha salga de la vista */
+    /* Evitar que el Ãºltimo menÃº de la derecha salga de la vista */
     .n-nav .n-nav-user ul li:last-child ul,
     .n-nav-block .n-nav-user ul li:last-child ul {
         right: 0;
@@ -235,12 +235,12 @@ Menú (Desktop)
     .n-nav ul.n-dropdown-menu {
         border-top: var(--nav-border-item-hover);
     }
-    /* Ocultar todos los submenúes */
+    /* Ocultar todos los submenÃºes */
     .n-nav ul.n-dropdown-menu,
     .n-nav-block ul.n-dropdown-menu {
         display: none;
     }
-    /* Mostrar submenú marcado como "abierto" (n-menu-opened) */
+    /* Mostrar submenÃº marcado como "abierto" (n-menu-opened) */
     .n-nav .n-menu-opened + ul.n-dropdown-menu,
     .n-nav-block .n-menu-opened + ul.n-dropdown-menu {
         display: table;
@@ -271,16 +271,16 @@ Menú (Desktop)
         margin: 3px 0;
     }
 }
-/*Menú (estándar y de bloque) - Máx 1024 - Estilos para dispositivos móviles*/
+/*MenÃº (estÃ¡ndar y de bloque) - MÃ¡x 1024 - Estilos para dispositivos mÃ³viles*/
 @media only screen and (max-width: 1023px) {
-    /*Mostrar botón de menú móvil*/
+    /*Mostrar botÃ³n de menÃº mÃ³vil*/
     .n-nav .n-nav-menu-toggle {
         display: block;
     }
     .n-nav-block .n-nav-menu-toggle {
         display: block;
     }
-    /*Ocultando menú*/
+    /*Ocultando menÃº*/
     .n-nav .n-nav-menu-container {
         display: none;
         position: absolute;
@@ -290,13 +290,17 @@ Menú (Desktop)
     }
     .n-nav-block .n-nav-menu-container {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 64px;
-        width: 100%;
-        /*height: 80vh;*/
+        right: 0px;
+        width: 250px;
+        /*height: 100vh;*/
+        max-height: 85vh;
+        overflow-y: scroll;
+        z-index: 5000;
         background-color: white;
     }
-    /*Menú de sistema*/
+    /*MenÃº de sistema*/
     .n-nav-menu,
     .n-nav-user {
         width: 100%;
@@ -306,42 +310,44 @@ Menú (Desktop)
         /*border-top: 5px solid #f7f7f7;*/
         margin-top: var(--margin);
     }
-    /*Clase para mostrar el menú móvil (agregado a n-nav-menu-container */
+    /*Clase para mostrar el menÃº mÃ³vil (agregado a n-nav-menu-container */
     .n-nav .n-nav-mobile-active {
         display: block;
     }
     .n-nav-block .n-nav-mobile-active {
         display: block;
     }
-    /*Elementos del menú*/
+    /*Elementos del menÃº*/
     .n-nav .n-nav-menu ul li,
     .n-nav-block .n-nav-menu ul li,
     .n-nav .n-nav-user ul li,
     .n-nav-block .n-nav-user ul li
     {
-        width: 25vw;
-        min-width: 25vw;
-        max-width: 10rem;
-        height: 6rem;
+        width: 100%;
+        /*min-width: 25vw;
+        max-width: 10rem;*/
+        /*height: 6rem;*/
         font-size: 1rem;
         /*background-color: #8080805c;*/
-        float: left;
+        /*float: left;*/
         display: inline-block;
-        text-align: center;
+        /*text-align: center;*/
     }
-    /*Enlaces del menú móvil*/
+    /*Enlaces del menÃº mÃ³vil*/
     .n-nav .n-nav-menu ul li a,
     .n-nav-block .n-nav-menu ul li a,
     .n-nav .n-nav-user ul li a,
     .n-nav-block .n-nav-user ul li a
     {
+        text-decoration: none;
+        padding: 10px 15px;
         color: inherit;
         width: 100%;
         height: 100%;
         display: block;
         border: var(--nav-border);
     }
-    /*Íconos de enlaces del menú móvil*/
+    /*Ãconos de enlaces del menÃº mÃ³vil*/
     .n-nav .n-nav-menu ul li a .n-icon,
     .n-nav-block .n-nav-menu ul li a .n-icon,
     .n-nav .n-nav-user ul li a .n-icon,
@@ -349,12 +355,12 @@ Menú (Desktop)
     {
         /*background: yellow;*/
         color: gray;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         display: inline-block;
-        width: 100%;
-        padding-top: 1.1rem;
+        width: 30px;
+        /*padding-top: 1.1rem;*/
     }
-    /*Etiquetas/texto de los enlaces del menú*/
+    /*Etiquetas/texto de los enlaces del menÃº*/
     .n-nav .n-nav-menu ul li a .n-nav-label,
     .n-nav-block .n-nav-menu ul li a .n-nav-label,
     .n-nav .n-nav-user ul li a .n-nav-label,
@@ -362,18 +368,27 @@ Menú (Desktop)
     {
         /*background: #dada52;*/
         display: inline-block;
-        width: 100%;
+        width: 145px;
     }
-    /*Menú desplegable (sub menú)*/
+    /*ÃŒcono de menÃ¹ desplegable*/
+    .n-nav .n-nav-menu ul li a .n-dropdown-icon,
+    .n-nav-block .n-nav-menu ul li a .n-dropdown-icon,
+    .n-nav .n-nav-user ul li a .n-dropdown-icon,
+    .n-nav-block .n-nav-user ul li a .n-dropdown-icon
+    {
+        float: right;
+        color: gray;
+    }
+    /*MenÃº desplegable (sub menÃº)*/
     .n-nav ul.n-dropdown-menu,
     .n-nav-block ul.n-dropdown-menu {
-        background: yellow;
-        flex-direction: column;
-        min-width: 15rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background: #dcdcdc;
+        /*flex-direction: column;*/
+        /*min-width: 15rem;*/
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
         display: none;
     }
     .n-nav ul.n-dropdown-menu li,
@@ -387,18 +402,21 @@ Menú (Desktop)
         padding: 10px;
         text-decoration: none;
     }
+    .n-nav-submenu a.n-menu-opened + ul.n-menu-opened {
+        display: block;
+    }
 }
-/*Menú estándar y de bloque (máximo: 480px)*/
+/*MenÃº estÃ¡ndar y de bloque (mÃ¡ximo: 480px)*/
 @media only screen and (max-width: 480px)
 {
-    /*Elementos del menú*/
+    /*Elementos del menÃº*/
     .n-nav .n-nav-menu ul li,
     .n-nav-block .n-nav-menu ul li,
     .n-nav .n-nav-user ul li,
     .n-nav-block .n-nav-user ul li
     {
-        width: 33.33vw;
-        min-width: 33.33vw;
+        /*width: 33.33vw;*/
+        /*min-width: 33.33vw;*/
         /*max-width: 10rem;*/
         /*height: 6rem;*/
         /*font-size: 1rem;*/

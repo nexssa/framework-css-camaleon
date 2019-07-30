@@ -40,7 +40,7 @@ html, html[n-theme="n-light"] {
     --nav-color-hover: 000;
     --nav-bg-color: #f8f8f8;
     --nav-border-item-hover: 3px solid gray;
-    --nav-border: 1px solid #D9DEE4;
+    --nav-border: 1px solid #F1F1F1;
 }
 html[n-theme="n-dark-green"] {
     /*Elementos principales*/
@@ -50,6 +50,13 @@ html[n-theme="n-dark-green"] {
     --h-color: #1bcd9d;
     /*Navigation bar */
     --nav-bg-color: #2d3032;
+}
+/*
+    MASKOTT :: TEMA DE LA APLICACIÓN MASKOTT (DE NÜTECH)
+*/
+html[n-theme="maskott"]
+{
+
 }
 /*
 
@@ -107,10 +114,26 @@ Todas serán de 100% de ancho inicialmente (Mobile First)
     width: 100%;
 }
 /* Mobile - Small */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 320px) {
     [class*="n-col-"] {
         width: 100%;
     }
+}
+/* Mobile - Xtra Small Smartphones */
+@media only screen and (min-width: 320px) {
+    .n-container {width: 480px;}
+    .n-col-1xs {width: 8.33%;}
+    .n-col-2xs {width: 16.66%;}
+    .n-col-3xs {width: 25%;}
+    .n-col-4xs {width: 33.33%;}
+    .n-col-5xs {width: 41.66%;}
+    .n-col-6xs {width: 50%;}
+    .n-col-7xs {width: 58.33%;}
+    .n-col-8xs {width: 66.66%;}
+    .n-col-9xs {width: 75%;}
+    .n-col-10xs {width: 83.33%;}
+    .n-col-11xs {width: 91.66%;}
+    .n-col-12xs {width: 100%;}
 }
 /* Mobile - Smartphones */
 @media only screen and (min-width: 480px) {

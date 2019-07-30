@@ -400,7 +400,7 @@ FIN: Menú de navegación (nav-bar)
 */
 @media all and (max-width: 360px) and (min-width: 0px) {
     body {
-        background-color: #803594;
+        /*background-color: #803594;*/
     }
     /*
     .n-nav-block-items {
